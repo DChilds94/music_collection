@@ -30,6 +30,7 @@ artist3 = Artist.new({
     {
       "title" => "The White Album",
       "number_of_songs" => 12,
+      "genre" => "rock",
       "artist_id" => artist1.id
     })
 
@@ -39,6 +40,7 @@ artist3 = Artist.new({
       {
       "title" => "My Dear Melancholy",
       "number_of_songs" => 6,
+      "genre" => "R&B",
       "artist_id" => artist2.id
       })
 
@@ -48,6 +50,7 @@ artist3 = Artist.new({
         {
           "title" => "Hard Days Night",
           "number_of_songs" => 10,
+          "genre" => "Rock",
           "artist_id" => artist1.id
         })
 
@@ -57,6 +60,7 @@ artist3 = Artist.new({
           {
           "title" => "A Mineral Love",
           "number_of_songs" => 13,
+          "genre" => "Electronic",
           "artist_id" => artist3.id
           })
 
