@@ -2,6 +2,9 @@ require('pg')
 
 class Album
 
+  attr_reader :id, :artist_id
+  attr_writer :title, :number_of_songs, :genre
+
    def initialize(options)
      @id = options["id"].to_i
      @title = options["title"]
@@ -36,6 +39,9 @@ class Album
      return Artist.new(artist_hash)
    end
 
-
-
+   def edit()
+     sql = "UPDATE albums SET (title, number_of_songs, genre) = ($1, $2, $3) WHERE id = $4"
+     values = [@title, @number_of_songs, @genre, @id]
+     SqlRunner.run(sql, values)
+   end
 end # end of the class
